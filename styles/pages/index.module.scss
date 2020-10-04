@@ -11,6 +11,7 @@
     // background-color: map-get($map: $colors, $key: seventh);
     height: 90vh;
     color: #ffffff;
+    color: map-get($map: $colors, $key: first);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,6 +19,7 @@
     div {
         h1 {
             font-size: 5rem;
+            font-family: "Cedarville Cursive", cursive;
         }
     }
 }

@@ -1,0 +1,8 @@
+@import "../mixins/variables.mixin.scss";
+@import "../mixins/breakpoints.mixin.scss";
+
+.footer {
+    background-color: map-get($map: $colors, $key: seventh);
+    color: map-get($map: $colors, $key: third);
+    color: #1a1a1a;
+}

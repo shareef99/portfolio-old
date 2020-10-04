@@ -5,6 +5,7 @@ import Header from "../components/header";
 import Style from "../styles/pages/index.module.scss";
 import UtilStyles from "../styles/utils.module.scss";
 import useIsInViewport from "use-is-in-viewport";
+import Footer from "../components/footer";
 
 export default function index() {
     const [isInViewport, targetRef] = useIsInViewport();
@@ -23,9 +24,9 @@ export default function index() {
                     content="width=device-width, initial-scale=1.0"
                 />
                 <link
-                    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+                    href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Zilla+Slab:wght@400;500;600;700&display=swap"
                     rel="stylesheet"
-                ></link>
+                />
                 <meta name="description" content="This is a personal site" />
                 <title>Shareef | Home</title>
                 <link
@@ -199,6 +200,7 @@ export default function index() {
                         </ol>
                     </div>
                 </section>
+                <Footer />
             </section>
         </>
     );
