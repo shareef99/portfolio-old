@@ -1,0 +1,95 @@
+@import "../mixins/breakpoints.mixin.scss";
+@import "../mixins/variables.mixin.scss";
+
+.heroSection {
+    //Parallax effect
+    background-image: url("../../public/images/coding\ man.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    // background-color: map-get($map: $colors, $key: seventh);
+    height: 90vh;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    div {
+        h1 {
+            font-size: 5rem;
+        }
+    }
+}
+
+.introSection {
+    color: map-get($map: $colors, $key: third);
+    text-align: center;
+
+    h2 {
+        text-align: start;
+    }
+
+    img {
+        margin: 50px auto;
+    }
+
+    p {
+        margin-top: 10px;
+        text-align: left;
+        line-height: 1.5;
+        letter-spacing: normal;
+    }
+}
+
+.skillSection {
+    background-color: map-get($map: $colors, $key: forth);
+    color: map-get($map: $colors, $key: third);
+    .skills {
+        display: flex;
+        flex-direction: column;
+        // margin-top: 50px;
+        justify-content: space-between;
+        .skillsItem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+            h3 {
+                text-align: center;
+                margin: 20px 0;
+            }
+        }
+    }
+    @include md {
+        .skills {
+            .skillsItem {
+                flex-direction: row;
+                h3 {
+                    text-align: start;
+                }
+                div {
+                    align-self: flex-start;
+                    margin: 0 50px;
+                }
+            }
+            .reversed {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
+
+.aboutSection {
+    color: map-get($map: $colors, $key: third);
+    margin-top: 20px;
+    margin-left: 5px;
+    ol {
+        li {
+            list-style: decimal inside;
+            margin: 5px;
+            line-height: 1.4;
+            font-size: 1.1rem;
+        }
+    }
+}

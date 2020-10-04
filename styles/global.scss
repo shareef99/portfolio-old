@@ -1,0 +1,29 @@
+@import "./mixins/variables.mixin.scss";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-display: swap;
+    width: 100%;
+    max-width: 100%;
+    // font-family: "Open Sans", sans-serif;
+    // font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+}

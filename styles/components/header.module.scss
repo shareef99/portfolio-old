@@ -1,0 +1,125 @@
+@import "../mixins/variables.mixin.scss";
+@import "../mixins/breakpoints.mixin.scss";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 10%;
+    height: 10vh;
+    // background-color: map-get($map: $colors, $key: seventh);
+    background-image: linear-gradient(
+        90deg,
+        map-get($map: $colors, $key: seventh),
+        map-get($map: $colors, $key: eight)
+    );
+    color: #ffffff;
+    font-weight: 700;
+    nav {
+        position: relative;
+        width: 100%;
+        align-self: flex-start;
+        transform: translateX(-100%);
+        background-color: inherit;
+        ul {
+            position: absolute;
+            top: 10vh;
+            right: 125px;
+            width: 200%;
+            height: 90vh;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: space-around;
+            transition: all 0.3s ease;
+            background-color: inherit;
+            li {
+                margin: auto 20% auto auto;
+            }
+        }
+    }
+    @include sm {
+        nav {
+            ul {
+                right: 200px;
+                width: 100%;
+                li {
+                    margin: auto auto auto auto;
+                }
+            }
+        }
+    }
+    @include md {
+        nav {
+            transform: translateX(0%);
+            width: 50%;
+            ul {
+                position: relative;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 10vh;
+                flex-direction: row;
+                li {
+                    margin: auto 0 auto auto;
+                }
+            }
+        }
+        .burger {
+            display: none;
+        }
+    }
+    @include lg {
+        nav {
+            width: 40%;
+        }
+    }
+
+    .open {
+        transform: translateX(0%);
+        transition: all 0.3s ease;
+    }
+    .close {
+        // transform: translateX(-100%);
+        transition: all 0.3s ease;
+    }
+    .burger {
+        width: 30px;
+        cursor: pointer;
+        div {
+            height: 3px;
+            margin: 5px 0;
+            background-color: #ffffff;
+        }
+    }
+    .burgerToCross .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+        transition: transform 0.5s ease;
+    }
+
+    .burgerToCross .line2 {
+        opacity: 0;
+    }
+
+    .burgerToCross .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+        transition: transform 0.5s ease;
+    }
+    .crossToBurger .line1 {
+        transition: transform 0.5s ease;
+    }
+
+    .crossToBurger .line2 {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+    }
+
+    .crossToBurger .line3 {
+        transition: transform 0.5s ease;
+    }
+    .logo {
+        font-size: 20px;
+        letter-spacing: 2px;
+        font-weight: 900;
+    }
+}
