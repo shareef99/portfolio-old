@@ -44,6 +44,7 @@ export default function index() {
                     </div>
                 </section>
                 <section
+                    id="introduction"
                     className={`${UtilStyles.containerWithMargin} ${Style.introSection}`}
                 >
                     <h2 className={UtilStyles.h2}>Introduction</h2>
@@ -73,6 +74,7 @@ export default function index() {
                     </p>
                 </section>
                 <section
+                    id="skills"
                     className={`${UtilStyles.containerWithPadding} ${Style.skillSection}`}
                 >
                     <h2 className={UtilStyles.h2}>Skills</h2>
@@ -159,7 +161,10 @@ export default function index() {
                         </div>
                     </div>
                 </section>
-                <section className={`${UtilStyles.containerWithMargin}`}>
+                <section
+                    id="about"
+                    className={`${UtilStyles.containerWithMargin}`}
+                >
                     <h2 className={UtilStyles.h2}>About</h2>
                     <div className={`${Style.aboutSection}`}>
                         <ol start="0">

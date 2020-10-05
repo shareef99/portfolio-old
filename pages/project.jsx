@@ -2,8 +2,8 @@ import Header from "../components/header";
 import Head from "next/head";
 // import { useSpring, animated } from "react-spring";
 import Styles from "../styles/pages/project.module.scss";
-// import UtilStyles from "../styles/utils.module.scss";
-// import Footer from "../components/footer";
+import UtilStyles from "../styles/utils.module.scss";
+import Footer from "../components/footer";
 import { useState } from "react";
 
 export default function Project() {
@@ -93,7 +93,7 @@ export default function Project() {
             </Head>
             <section>
                 <Header />
-                <h1 className={` ${Styles.heading}`}>Projects</h1>
+                <h2 className={` ${UtilStyles.h2}`}>Projects</h2>
                 <section className={`${Styles.cardSection}`}>
                     {cards.map((card) => {
                         return (
@@ -108,7 +108,7 @@ export default function Project() {
                         );
                     })}
                 </section>
-                {/* <Footer /> */}
+                <Footer />
             </section>
         </>
     );
