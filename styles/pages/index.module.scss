@@ -21,6 +21,12 @@
             font-size: 5rem;
             font-family: "Cedarville Cursive", cursive;
         }
+        p {
+            span::before {
+                content: "";
+                animation: changeSubtitle infinite 8s;
+            }
+        }
     }
 }
 
@@ -31,7 +37,13 @@
     h2 {
         text-align: start;
     }
-
+    h3 {
+        span {
+            padding: 0 5px;
+            position: relative;
+            animation: wave infinite 1s;
+        }
+    }
     img {
         margin: 50px auto;
     }
@@ -93,5 +105,29 @@
             line-height: 1.4;
             font-size: 1.1rem;
         }
+    }
+}
+
+@keyframes changeSubtitle {
+    0% {
+        content: "Student";
+    }
+    50% {
+        content: "Web Developer";
+    }
+    100% {
+        content: "Constant Learner";
+    }
+}
+
+@keyframes wave {
+    0% {
+        right: 5px;
+    }
+    50% {
+        right: 0;
+    }
+    100% {
+        right: 5px;
     }
 }

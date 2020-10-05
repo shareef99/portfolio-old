@@ -93,17 +93,17 @@ export default function Project() {
             </Head>
             <section>
                 <Header />
-                <h2 className={` ${UtilStyles.h2}`}>Projects</h2>
+                <h2 className={` ${UtilStyles.h2} ${Styles.heading}`}>
+                    Projects
+                </h2>
                 <section className={`${Styles.cardSection}`}>
                     {cards.map((card) => {
                         return (
                             <div key={card.id} className={Styles.card}>
-                                <img src={card.src} alt={card.alt} />
-                                <p>
-                                    <a href={card.href} target="_blank">
-                                        {card.title}
-                                    </a>
-                                </p>
+                                <a href={card.href} target="_blank">
+                                    <img src={card.src} alt={card.alt} />
+                                    <p>{card.title}</p>
+                                </a>
                             </div>
                         );
                     })}

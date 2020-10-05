@@ -40,7 +40,9 @@ export default function index() {
                 <section className={Style.heroSection}>
                     <div>
                         <h1>I'm Shareef</h1>
-                        <p>A Web Developer</p>
+                        <p>
+                            A <span></span>
+                        </p>
                     </div>
                 </section>
                 <section
@@ -64,8 +66,8 @@ export default function index() {
                         Hello <span>👋</span>
                     </h3>
                     <p>
-                        I'm an Engineering student, a web developer and a
-                        constant learner, while learning I have developed some
+                        I'm shareef, an engineering student, a web developer and
+                        a constant learner, while learning I have developed some
                         websites you can visit them in the{" "}
                         <Link href="/project">
                             <a>project</a>

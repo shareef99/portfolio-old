@@ -25,7 +25,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link href="/#about">
-                                    <a href="#about">About</a>
+                                    <a>About</a>
                                 </Link>
                             </li>
                         </ul>
@@ -98,7 +98,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <a
-                                    href="https://shareef99.github.io/Drum-Kit/was"
+                                    href="https://shareef99.github.io/Drum-Kit/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -109,15 +109,14 @@ export default function Footer() {
                                 <a
                                     href="https://www.freecodecamp.org/certification/shareef99/responsive-web-design"
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     FreeCodeCamp <br /> certificate
                                 </a>
                             </li>
                             <li>
-                                <Link href="/project">
-                                    <a rel="noopener noreferrer">
-                                        more projects
-                                    </a>
+                                <Link href="/project" rel="noopener noreferrer">
+                                    <a>more projects</a>
                                 </Link>
                             </li>
                         </ul>
