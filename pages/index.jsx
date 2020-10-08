@@ -9,26 +9,33 @@ import Footer from "../components/footer";
 
 export default function index() {
     const [isInViewport, targetRef] = useIsInViewport();
-
-    // const [isInViewport2, targetRef2] = useIsInViewport();
     const [isInViewport3, targetRef3] = useIsInViewport();
     const [isInViewport4, targetRef4] = useIsInViewport();
     const [isInViewport5, targetRef5] = useIsInViewport();
-    // const [isInViewport6, targetRef6] = useIsInViewport();
     return (
         <>
             <Head>
                 <meta charSet="UTF-8" />
                 <meta
+                    name="description"
+                    content="I'm shareef, an engineering student, a web developer and a constant learner, while learning I have developed some websites you can visit them in the project section."
+                />
+                <meta
+                    name="keywords"
+                    content="shareef, shareefBhai, shareef99, portfolio, personal-site"
+                />
+                <meta name="author" content="Shareef" />
+                <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
                 />
+
                 <link
                     href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Zilla+Slab:wght@400;500;600;700&display=swap"
                     rel="stylesheet"
                 />
-                <meta name="description" content="This is a personal site" />
                 <title>Shareef | Home</title>
+                {/* favicon Link */}
                 <link
                     rel="shortcut icon"
                     href="images/s-logo.png"

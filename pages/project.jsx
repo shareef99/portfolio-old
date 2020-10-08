@@ -84,6 +84,21 @@ export default function Project() {
     return (
         <>
             <Head>
+                <meta charSet="UTF-8" />
+                <meta
+                    name="description"
+                    content="see cool websites Shareef coded through out the web development journey."
+                />
+                <meta
+                    name="keywords"
+                    content="projects, project, shareef, shareef99, shareefBhai, web development projects, html-css projects"
+                />
+
+                <meta name="author" content="Shareef" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
                 <title>Project | Shareef</title>
                 <link
                     rel="shortcut icon"

@@ -61,7 +61,9 @@
                 height: 10vh;
                 flex-direction: row;
                 li {
-                    margin: auto 0 auto auto;
+                    // margin: auto 0 auto auto;
+
+                    margin: auto auto auto auto;
                 }
             }
         }
@@ -121,5 +123,17 @@
         font-size: 20px;
         letter-spacing: 2px;
         font-weight: 900;
+    }
+
+    .darkMode {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 20px;
+            height: auto;
+            margin: auto auto auto 20px;
+            cursor: pointer;
+        }
     }
 }

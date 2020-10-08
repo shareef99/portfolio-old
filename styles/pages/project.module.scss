@@ -7,7 +7,6 @@
     margin: auto;
     text-align: center;
     justify-content: center;
-    // flex-direction: column;
 }
 
 .heading {
@@ -22,28 +21,20 @@
     background-color: map-get($map: $colors, $key: seventh);
     color: map-get($map: $colors, $key: fifth);
     font-size: 1.25rem;
-    // border: 1px solid #333333;
     box-shadow: 5px 7px 10px 1px map-get($map: $colors, $key: sixth);
     transition: all 0.4s ease;
-    // height: 400px;
     img {
         max-width: 100%;
         width: 100%;
         height: calc(100% - 50px);
         transition: all 0.4s ease;
-
-        &:hover {
-            transform: scale(1.015);
-            box-shadow: 5px 7px 10px 0px map-get($map: $colors, $key: fifth);
-        }
     }
     p {
         margin: 10px 0;
         width: 100%;
     }
 
-    // &:hover {
-    //     transform: scale(1.015);
-    //     box-shadow: 2px 2px 25px 2px map-get($map: $colors, $key: baseColor);
-    // }
+    &:hover {
+        transform: scale(1.015);
+    }
 }
