@@ -162,7 +162,7 @@ export default function index() {
                                     the best from each and every teammate.{" "}
                                     <q title="From the book 'How to stop worrying and start living' by Dale Carnegie">
                                         Leadership usually gravitates to the man
-                                        who can get up and say what he things
+                                        who can get up and say what he thinks
                                     </q>
                                     .
                                 </p>
