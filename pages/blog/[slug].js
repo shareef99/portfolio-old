@@ -4,14 +4,34 @@ import path from "path";
 import matter from "gray-matter";
 import Head from "next/head";
 import marked from "marked";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import Link from "next/link";
 
 const Post = ({ htmlString, data }) => {
     return (
         <>
             <Head>
                 <title>{data.title}</title>
+                <meta name="description" content={data.description} />
+                <meta name="author" content={data.author} />
+                <meta http-equiv="keywords" content={data.keywords}></meta>
+                <meta charSet="UTF-8" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+                <meta
+                    http-equiv="content-type"
+                    content="text/html; charset=UTF-8"
+                ></meta>
             </Head>
-            <div dangerouslySetInnerHTML={{ __html: htmlString }}></div>
+            <section>
+                <Header />
+                <div dangerouslySetInnerHTML={{ __html: htmlString }}></div>
+                <Link href="/blog">Back to blog</Link>
+                <Footer />
+            </section>
         </>
     );
 };

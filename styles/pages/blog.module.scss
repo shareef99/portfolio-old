@@ -1,0 +1,13 @@
+@import "../mixins/breakpoints.mixin.scss";
+@import "../mixins/variables.mixin.scss";
+
+.shareef {
+    width: 90%;
+    @include sm {
+        width: 85%;
+    }
+    @include md {
+        width: 80%;
+    }
+    margin: 50px auto;
+}

@@ -1,6 +1,8 @@
 ---
 title: FAQ
 description: "Frequently Asked Questions"
+# Give the file nam eto the path
+path: test2
 ---
 
 ## What keyboard do you use?
