@@ -3,11 +3,8 @@
 #Shareef
 portfolio.git/
 portfolio/
-.firebase/
 .vscode/
 portfolio.git
-.firebaserc
-firebase.json
 
 # dependencies
 /node_modules
