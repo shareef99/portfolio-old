@@ -7,42 +7,62 @@ import matter from "gray-matter";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import UtilStyles from "../styles/utils.module.scss";
-import Styles from "../styles/pages/blog.module.scss";
+import Style from "../styles/pages/blog.module.scss";
 import { getSortedPostsData } from "../lib/post";
-export default function blog({ slugs, allPostsData }) {
-    console.log(slugs);
-    console.log(allPostsData);
+export default function blog({ allPostsData }) {
     return (
         <>
-            <Header />
             <Head>
                 <title>Blogs | Shareef</title>
+                <meta name="description" content="" />
+                <meta name="author" content="Shareef" />
+                <meta name="keywords" content="" />
+                <meta charSet="UTF-8" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+                <meta
+                    http-equiv="content-type"
+                    content="text/html; charset=UTF-8"
+                />
             </Head>
+
             <section>
-                <section className={Styles.shareef}>
-                    <h2 className={` ${UtilStyles.h2}`}>Blog</h2>
-                    <ul>
+                <Header />
+                <section className={UtilStyles.containerWith50pxMargin}>
+                    <h1 className={` ${UtilStyles.h2}`}>Blogs</h1>
+                    <section>
                         {allPostsData.map(
-                            ({ id, title, path, description }) => (
-                                <div key={id}>
-                                    <Link href={`/blog/${path}`}>
-                                        <a>{title}</a>
-                                    </Link>
-                                    <br />
-                                    {description}{" "}
-                                    <Link href={`/blog/${path}`}>
-                                        <a>[read more]</a>
-                                    </Link>
-                                    <br />
-                                    id = {id}
-                                    <br />
+                            ({ id, title, description, date }) => (
+                                <div key={id} className={Style.blogsContainer}>
+                                    <div
+                                        className={`${UtilStyles.h3} ${Style.title}`}
+                                    >
+                                        <Link href={`/blog/${id}`}>
+                                            <a>{title}</a>
+                                        </Link>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            {description}
+                                            <Link href={`/blog/${id}`}>
+                                                <a className={Style.readMore}>
+                                                    ...Learn More Now
+                                                </a>
+                                            </Link>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p className={Style.date}>{date}</p>
+                                    </div>
                                 </div>
                             )
                         )}
-                    </ul>
+                    </section>
                 </section>
+                <Footer />
             </section>
-            <Footer />
         </>
     );
 }
@@ -58,15 +78,3 @@ export const getStaticProps = async () => {
         },
     };
 };
-
-// {
-//     slugs.map((slug) => {
-//         return (
-//             <div key={slug}>
-//                 <Link href={"/blog/" + slug}>
-//                     <a>{slug}</a>
-//                 </Link>
-//             </div>
-//         );
-//     });
-// }

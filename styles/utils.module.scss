@@ -10,6 +10,16 @@
         width: 80%;
     }
 }
+.containerWith50pxMargin {
+    width: 90%;
+    margin: 50px auto;
+    @include sm {
+        width: 85%;
+    }
+    @include md {
+        width: 80%;
+    }
+}
 .containerWithPadding {
     padding: 100px 5%;
     @include sm {

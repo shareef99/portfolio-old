@@ -4,10 +4,10 @@
 .footerSection {
     background-color: map-get($map: $colors, $key: seventh);
     .footer {
-        color: map-get($map: $colors, $key: third);
+        color: map-get($map: $colors, $key: fifth);
         // color: #1a1a1a;
-        color: #ffffff;
-        opacity: 0.9;
+        // color: #ffffff;
+        // opacity: 0.9;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -24,8 +24,9 @@
                 li {
                     margin: 10px 0;
                     cursor: pointer;
+                    color: map-get($map: $colors, $key: fifth);
                     opacity: 0.8;
-                    // font-size: 1.2rem;
+                    font-size: 1.1rem;
                     transition: all 0.3s ease;
                     &:hover {
                         opacity: 1;
