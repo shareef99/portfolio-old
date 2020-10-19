@@ -1,5 +1,7 @@
-# welcome
+# welcome to my portfolio repo
 
-## this is my portfolio repo
+This repo is hosted on Vercel.
 
-after finishing my project i will rewrite the readme, See ya!!
+[Live Demo](portfolio.shareef.vercel.app)
+
+Contact me: nadeemshareef@gmail.com
