@@ -39,8 +39,8 @@ export default function Header() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/#about">
-                                <a>About</a>
+                            <Link href="/blog">
+                                <a>Blog</a>
                             </Link>
                         </li>
                         <li>
@@ -65,7 +65,7 @@ export default function Header() {
                     <div className={` ${Styles.line3} `}></div>
                 </div>
                 <div className={Styles.darkMode} onClick={handleDarkMode}>
-                    <img src="images/darkMode.png" alt="" />
+                    <img src="../images/darkMode.png" alt="" />
                 </div>
             </header>
         </>

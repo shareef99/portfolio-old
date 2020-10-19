@@ -29,18 +29,8 @@ export default function index() {
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
                 />
-
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Zilla+Slab:wght@400;500;600;700&display=swap"
-                    rel="stylesheet"
-                />
                 <title>Shareef | Home</title>
                 {/* favicon Link */}
-                <link
-                    rel="shortcut icon"
-                    href="images/s-logo.png"
-                    type="image/x-icon"
-                />
             </Head>
             <section>
                 <Header />
@@ -162,7 +152,7 @@ export default function index() {
                                     the best from each and every teammate.{" "}
                                     <q title="From the book 'How to stop worrying and start living' by Dale Carnegie">
                                         Leadership usually gravitates to the man
-                                        who can get up and say what he things
+                                        who can get up and say what he thinks
                                     </q>
                                     .
                                 </p>
