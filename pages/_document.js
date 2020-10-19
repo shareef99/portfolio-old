@@ -9,7 +9,17 @@ class MyDocument extends Document {
     render() {
         return (
             <Html lang="en">
-                <Head />
+                <Head>
+                    <link
+                        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Zilla+Slab:wght@400;500;600;700&display=swap"
+                        rel="stylesheet"
+                    />
+                    <link
+                        rel="shortcut icon"
+                        href="../images/s-logo.png"
+                        type="image/x-icon"
+                    />
+                </Head>
                 <body>
                     <Main />
                     <NextScript />

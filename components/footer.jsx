@@ -131,7 +131,7 @@ export default function Footer() {
                         >
                             <img
                                 className={Style.socialMediaIcon}
-                                src="images/instagram.png"
+                                src="../images/instagram.png"
                                 alt="instagram icon"
                             />
                         </a>
@@ -142,7 +142,7 @@ export default function Footer() {
                         >
                             <img
                                 className={Style.socialMediaIcon}
-                                src="images/github.png"
+                                src="../images/github.png"
                                 alt="github icon"
                             />
                         </a>
@@ -153,7 +153,7 @@ export default function Footer() {
                         >
                             <img
                                 className={Style.socialMediaIcon}
-                                src="images/linkedin.png"
+                                src="../images/linkedin.png"
                                 alt="linkedin icon"
                             />
                         </a>
@@ -163,7 +163,7 @@ export default function Footer() {
                         >
                             <img
                                 className={Style.socialMediaIcon}
-                                src="images/gmail.png"
+                                src="../images/gmail.png"
                                 alt="gmail icon "
                             />
                         </a>
