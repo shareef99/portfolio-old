@@ -1,3 +1,50 @@
 .blogContent {
     margin: 50px 0 100px;
+    h3 {
+        margin: 1rem 0;
+    }
+    p {
+        margin: 0.5rem 0;
+    }
+    ul {
+        display: block;
+        list-style-type: disc;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 40px;
+        li {
+            display: list-item;
+            list-style-type: disc;
+        }
+    }
+    ol {
+        display: block;
+        list-style-type: decimal;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 40px;
+        li {
+            display: list-item;
+            list-style-type: disc;
+        }
+    }
+    a {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.backToBlogs {
+    a {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }

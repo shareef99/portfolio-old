@@ -38,9 +38,11 @@ const Post = ({ htmlString, data }) => {
                         className={Style.blogContent}
                         dangerouslySetInnerHTML={{ __html: htmlString }}
                     ></div>
-                    <Link href="/blog">
-                        <a> ← Back to blogs</a>
-                    </Link>
+                    <div className={Style.backToBlogs}>
+                        <Link href="/blog">
+                            <a> ← Back to blogs</a>
+                        </Link>
+                    </div>
                 </section>
                 <Footer />
             </section>
