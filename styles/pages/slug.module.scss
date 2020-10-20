@@ -1,5 +1,10 @@
+@import "../mixins/breakpoints.mixin.scss";
 .blogContent {
-    margin: 50px 0 100px;
+    margin: 50px auto 100px;
+    // background-color: royalblue;
+    @include md {
+        width: 70%;
+    }
     h3 {
         margin: 1rem 0;
     }
