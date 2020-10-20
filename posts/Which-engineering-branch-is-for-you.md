@@ -6,7 +6,7 @@ date: "20-oct-2020"
 blogNo: 1
 ---
 
-## Which engineering branch is for you?
+## How to select best engineering branch.
 
 how to choose between different engineering branches/fields. Nowadays engineering admissions are going on so it is the right time to discuss it.
 

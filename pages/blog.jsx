@@ -14,9 +14,15 @@ export default function blog({ allPostsData }) {
         <>
             <Head>
                 <title>Blogs | Shareef</title>
-                <meta name="description" content="" />
+                <meta
+                    name="description"
+                    content="see all the awesome blogs written by Shareef"
+                />
                 <meta name="author" content="Shareef" />
-                <meta name="keywords" content="" />
+                <meta
+                    name="keywords"
+                    content="blog, shareefBlogs, blogs, shareef bhai blogs, shareef blog, shareef99 blog, "
+                />
                 <meta charSet="UTF-8" />
                 <meta
                     name="viewport"
