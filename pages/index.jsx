@@ -1,11 +1,10 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import Header from "../components/header";
 import Style from "../styles/pages/index.module.scss";
 import UtilStyles from "../styles/utils.module.scss";
 import useIsInViewport from "use-is-in-viewport";
-import Footer from "../components/footer";
+import Layout from "../components/layout";
 
 export default function index() {
     const [isInViewport, targetRef] = useIsInViewport();
@@ -13,7 +12,7 @@ export default function index() {
     const [isInViewport4, targetRef4] = useIsInViewport();
     const [isInViewport5, targetRef5] = useIsInViewport();
     return (
-        <>
+        <Layout>
             <Head>
                 <meta charSet="UTF-8" />
                 <meta
@@ -33,7 +32,6 @@ export default function index() {
                 {/* favicon Link */}
             </Head>
             <section>
-                <Header />
                 <section className={Style.heroSection}>
                     <div>
                         <h1>I'm Shareef</h1>
@@ -204,8 +202,7 @@ export default function index() {
                         </ol>
                     </div>
                 </section>
-                <Footer />
             </section>
-        </>
+        </Layout>
     );
 }

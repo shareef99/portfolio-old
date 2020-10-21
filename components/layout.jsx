@@ -1,12 +1,91 @@
-import React from "react";
-import Style from "../styles/components/footer.module.scss";
+import React, { useState } from "react";
+import Style from "../styles/components/layout.module.scss";
 import UtilStyles from "../styles/utils.module.scss";
 import Link from "next/link";
 
-export default function Footer() {
+export default function Layout({ children }) {
+    // Constants and variables
+    const [navSlider, setNavSlider] = useState({ isNavbarOpen: false });
+    const [darkMode, setDarkMode] = useState({ isDarkModeOn: false });
+    let darkModeClass = " ";
+
+    // Actions
+    const handleNavSlide = () => {
+        navSlider.isNavbarOpen
+            ? setNavSlider({ isNavbarOpen: !navSlider.isNavbarOpen })
+            : setNavSlider({ isNavbarOpen: !navSlider.isNavbarOpen });
+    };
+    const handleDarkMode = () => {
+        if (darkMode.isDarkModeOn) {
+            darkModeClass = "dark";
+            setDarkMode({ isDarkModeOn: !darkMode.isDarkModeOn });
+        } else if (!darkMode.isDarkModeOn) {
+            darkModeClass = "light";
+            setDarkMode({ isDarkModeOn: !darkMode.isDarkModeOn });
+        }
+        console.log(darkMode);
+        console.log("Mode: ", darkModeClass);
+        // alert("Dark mode is coming soon, thanks for visiting my website");
+    };
     return (
-        <>
-            <section
+        <section
+            id="layout"
+            className={`${
+                darkMode.isDarkModeOn ? `${Style.dark}` : `${Style.light}`
+            } `}
+        >
+            <header className={Style.header}>
+                <div className={Style.logo}>
+                    <Link href="/">
+                        <a>Shareef</a>
+                    </Link>
+                </div>
+                <nav
+                    className={`${
+                        navSlider.isNavbarOpen
+                            ? `${Style.open}`
+                            : `${Style.close}`
+                    } `}
+                >
+                    <ul>
+                        <li>
+                            <Link href="/project">
+                                <a>Project</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/blog">
+                                <a>Blog</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <a href="mailto:nadeemshareef934@gmail.com">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div
+                    className={`${Style.burger}  ${
+                        navSlider.isNavbarOpen
+                            ? `${Style.burgerToCross}`
+                            : `${Style.crossToBurger}`
+                    } `}
+                    onClick={handleNavSlide}
+                >
+                    <div className={` ${Style.line1} `}></div>
+                    <div className={` ${Style.line2} `}></div>
+                    <div className={` ${Style.line3} `}></div>
+                </div>
+                <div className={Style.darkMode} onClick={handleDarkMode}>
+                    <img src="../images/darkMode.png" alt="" />
+                </div>
+            </header>
+
+            <main>{children}</main>
+
+            <footer
+                id="footer"
                 className={`${UtilStyles.containerWithPadding} ${Style.footerSection}`}
             >
                 <section className={`$ ${Style.footer}`}>
@@ -175,8 +254,7 @@ export default function Footer() {
                         </Link>
                     </h4>
                 </section>
-                <section></section>
-            </section>
-        </>
+            </footer>
+        </section>
     );
 }
