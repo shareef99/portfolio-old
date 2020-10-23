@@ -4,15 +4,14 @@ import path from "path";
 import matter from "gray-matter";
 import Head from "next/head";
 import marked from "marked";
-import Header from "../../components/header";
-import Footer from "../../components/footer";
 import Link from "next/link";
 import Style from "../../styles/pages/slug.module.scss";
 import UtilStyles from "../../styles/utils.module.scss";
+import Layout from "../../components/layout";
 
 const Post = ({ htmlString, data }) => {
     return (
-        <>
+        <Layout>
             <Head>
                 <title>{data.title} | Shareef</title>
                 <meta name="description" content={data.description} />
@@ -29,24 +28,24 @@ const Post = ({ htmlString, data }) => {
                 />
             </Head>
             <section>
-                <Header />
                 <section className={UtilStyles.containerWith50pxMargin}>
                     <div>
                         <h1 className={UtilStyles.h2}>{data.title}</h1>
                     </div>
-                    <div
-                        className={Style.blogContent}
-                        dangerouslySetInnerHTML={{ __html: htmlString }}
-                    ></div>
-                    <div className={Style.backToBlogs}>
-                        <Link href="/blog">
-                            <a> ← Back to blogs</a>
-                        </Link>
-                    </div>
+                    <section id="blogContent">
+                        <div
+                            className={Style.blogContent}
+                            dangerouslySetInnerHTML={{ __html: htmlString }}
+                        ></div>
+                        <div className={Style.backToBlogs}>
+                            <Link href="/blog">
+                                <a> ← Back to blogs</a>
+                            </Link>
+                        </div>
+                    </section>
                 </section>
-                <Footer />
             </section>
-        </>
+        </Layout>
     );
 };
 

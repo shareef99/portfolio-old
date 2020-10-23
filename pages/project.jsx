@@ -1,10 +1,9 @@
-import Header from "../components/header";
 import Head from "next/head";
 // import { useSpring, animated } from "react-spring";
 import Styles from "../styles/pages/project.module.scss";
 import UtilStyles from "../styles/utils.module.scss";
-import Footer from "../components/footer";
 import { useState } from "react";
+import Layout from "../components/layout";
 
 export default function Project() {
     const [cards] = useState([
@@ -82,7 +81,7 @@ export default function Project() {
     ]);
 
     return (
-        <>
+        <Layout>
             <Head>
                 <meta charSet="UTF-8" />
                 <meta
@@ -107,7 +106,6 @@ export default function Project() {
                 />
             </Head>
             <section>
-                <Header />
                 <h2 className={` ${UtilStyles.h2} ${Styles.heading}`}>
                     Projects
                 </h2>
@@ -123,8 +121,7 @@ export default function Project() {
                         );
                     })}
                 </section>
-                <Footer />
             </section>
-        </>
+        </Layout>
     );
 }

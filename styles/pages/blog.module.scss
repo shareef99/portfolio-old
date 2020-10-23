@@ -1,11 +1,7 @@
-@import "../mixins/breakpoints.mixin.scss";
 @import "../mixins/variables.mixin.scss";
 
 .blogsContainer {
-    // background-color: red;
     color: map-get($map: $colors, $key: third);
-    // font-family: "Zilla Slab", serif;
-
     margin: 2rem 0;
     .title {
         width: 90%;
@@ -14,7 +10,6 @@
         font-size: 1.5rem;
         letter-spacing: normal;
         line-height: 1.3;
-        // background-color: royalblue;
     }
     .readMore {
         margin-left: 10px;

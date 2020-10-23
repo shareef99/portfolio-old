@@ -1,19 +1,19 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import Header from "../components/header";
 import Style from "../styles/pages/index.module.scss";
 import UtilStyles from "../styles/utils.module.scss";
 import useIsInViewport from "use-is-in-viewport";
-import Footer from "../components/footer";
+import Layout from "../components/layout";
 
 export default function index() {
     const [isInViewport, targetRef] = useIsInViewport();
     const [isInViewport3, targetRef3] = useIsInViewport();
     const [isInViewport4, targetRef4] = useIsInViewport();
     const [isInViewport5, targetRef5] = useIsInViewport();
+
     return (
-        <>
+        <Layout>
             <Head>
                 <meta charSet="UTF-8" />
                 <meta
@@ -33,7 +33,6 @@ export default function index() {
                 {/* favicon Link */}
             </Head>
             <section>
-                <Header />
                 <section className={Style.heroSection}>
                     <div>
                         <h1>I'm Shareef</h1>
@@ -44,7 +43,7 @@ export default function index() {
                 </section>
                 <section
                     id="introduction"
-                    className={`${UtilStyles.containerWithMargin} ${Style.introSection}`}
+                    className={`${UtilStyles.containerWithPadding} ${Style.introSection}`}
                 >
                     <h2 className={UtilStyles.h2}>Introduction</h2>
                     <div>
@@ -162,10 +161,11 @@ export default function index() {
                 </section>
                 <section
                     id="about"
-                    className={`${UtilStyles.containerWithMargin}`}
+                    className={`${UtilStyles.containerWithPadding}`}
                 >
                     <h2 className={UtilStyles.h2}>About</h2>
-                    <div className={`${Style.aboutSection}`}>
+
+                    <div id="about" className={`${Style.aboutSection}`}>
                         <ol start="0">
                             <li>I am a Frontend developer + Designer.</li>
                             <li>
@@ -204,8 +204,7 @@ export default function index() {
                         </ol>
                     </div>
                 </section>
-                <Footer />
             </section>
-        </>
+        </Layout>
     );
 }

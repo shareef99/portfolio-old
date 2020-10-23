@@ -4,14 +4,13 @@ import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import Header from "../components/header";
-import Footer from "../components/footer";
 import UtilStyles from "../styles/utils.module.scss";
 import Style from "../styles/pages/blog.module.scss";
 import { getSortedPostsData } from "../lib/post";
+import Layout from "../components/layout";
 export default function blog({ allPostsData }) {
     return (
-        <>
+        <Layout>
             <Head>
                 <title>Blogs | Shareef</title>
                 <meta
@@ -35,13 +34,16 @@ export default function blog({ allPostsData }) {
             </Head>
 
             <section>
-                <Header />
                 <section className={UtilStyles.containerWith50pxMargin}>
                     <h1 className={` ${UtilStyles.h2}`}>Blogs</h1>
                     <section>
                         {allPostsData.map(
                             ({ id, title, description, date }) => (
-                                <div key={id} className={Style.blogsContainer}>
+                                <div
+                                    key={id}
+                                    id="blogContainer"
+                                    className={Style.blogsContainer}
+                                >
                                     <div
                                         className={`${UtilStyles.h3} ${Style.title}`}
                                     >
@@ -67,9 +69,8 @@ export default function blog({ allPostsData }) {
                         )}
                     </section>
                 </section>
-                <Footer />
             </section>
-        </>
+        </Layout>
     );
 }
 
