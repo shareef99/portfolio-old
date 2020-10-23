@@ -5,7 +5,9 @@ $colors: (
     // no use
     third: #303545,
     // used mainly as text color
-    forth: #f3d4d5,
+    forth: rgb(243, 212, 213),
+    // forthDM: hsl(358, 75%, 60%),
+    forthDM: rgba(243, 212, 213, 0.65),
     // Secondary background
     fifth: #3ccfcf,
     sixth: #28a7a7,
@@ -14,4 +16,5 @@ $colors: (
     // used as main background
     eight: #4257b2,
     darkText: #010101,
+    white: #fffdf6,
 );

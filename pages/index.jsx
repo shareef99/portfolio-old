@@ -11,6 +11,7 @@ export default function index() {
     const [isInViewport3, targetRef3] = useIsInViewport();
     const [isInViewport4, targetRef4] = useIsInViewport();
     const [isInViewport5, targetRef5] = useIsInViewport();
+
     return (
         <Layout>
             <Head>
@@ -42,7 +43,7 @@ export default function index() {
                 </section>
                 <section
                     id="introduction"
-                    className={`${UtilStyles.containerWithMargin} ${Style.introSection}`}
+                    className={`${UtilStyles.containerWithPadding} ${Style.introSection}`}
                 >
                     <h2 className={UtilStyles.h2}>Introduction</h2>
                     <div>
@@ -160,10 +161,11 @@ export default function index() {
                 </section>
                 <section
                     id="about"
-                    className={`${UtilStyles.containerWithMargin}`}
+                    className={`${UtilStyles.containerWithPadding}`}
                 >
                     <h2 className={UtilStyles.h2}>About</h2>
-                    <div className={`${Style.aboutSection}`}>
+
+                    <div id="about" className={`${Style.aboutSection}`}>
                         <ol start="0">
                             <li>I am a Frontend developer + Designer.</li>
                             <li>

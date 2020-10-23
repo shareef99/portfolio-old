@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import Style from "../styles/components/layout.module.scss";
 import UtilStyles from "../styles/utils.module.scss";
 import Link from "next/link";
+import DarkModeToggle from "../components/darkModeToggle";
 
 export default function Layout({ children }) {
     // Constants and variables
     const [navSlider, setNavSlider] = useState({ isNavbarOpen: false });
-    const [darkMode, setDarkMode] = useState({ isDarkModeOn: false });
-    let darkModeClass = " ";
+    // const [darkMode, setDarkMode] = useState({ isDarkModeOn: false });
+    // let darkModeClass = " ";
 
     // Actions
     const handleNavSlide = () => {
@@ -15,25 +16,8 @@ export default function Layout({ children }) {
             ? setNavSlider({ isNavbarOpen: !navSlider.isNavbarOpen })
             : setNavSlider({ isNavbarOpen: !navSlider.isNavbarOpen });
     };
-    const handleDarkMode = () => {
-        if (darkMode.isDarkModeOn) {
-            darkModeClass = "dark";
-            setDarkMode({ isDarkModeOn: !darkMode.isDarkModeOn });
-        } else if (!darkMode.isDarkModeOn) {
-            darkModeClass = "light";
-            setDarkMode({ isDarkModeOn: !darkMode.isDarkModeOn });
-        }
-        console.log(darkMode);
-        console.log("Mode: ", darkModeClass);
-        // alert("Dark mode is coming soon, thanks for visiting my website");
-    };
     return (
-        <section
-            id="layout"
-            className={`${
-                darkMode.isDarkModeOn ? `${Style.dark}` : `${Style.light}`
-            } `}
-        >
+        <section id="layout">
             <header className={Style.header}>
                 <div className={Style.logo}>
                     <Link href="/">
@@ -66,6 +50,7 @@ export default function Layout({ children }) {
                     </ul>
                 </nav>
                 <div
+                    id="burger"
                     className={`${Style.burger}  ${
                         navSlider.isNavbarOpen
                             ? `${Style.burgerToCross}`
@@ -77,8 +62,8 @@ export default function Layout({ children }) {
                     <div className={` ${Style.line2} `}></div>
                     <div className={` ${Style.line3} `}></div>
                 </div>
-                <div className={Style.darkMode} onClick={handleDarkMode}>
-                    <img src="../images/darkMode.png" alt="" />
+                <div>
+                    <DarkModeToggle />
                 </div>
             </header>
 
@@ -247,7 +232,7 @@ export default function Layout({ children }) {
                             />
                         </a>
                     </div>
-                    <h4>
+                    <h4 id="copyRight">
                         Design with 💖 by{" "}
                         <Link href="/">
                             <a>Shareef</a>

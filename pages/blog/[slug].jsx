@@ -32,15 +32,17 @@ const Post = ({ htmlString, data }) => {
                     <div>
                         <h1 className={UtilStyles.h2}>{data.title}</h1>
                     </div>
-                    <div
-                        className={Style.blogContent}
-                        dangerouslySetInnerHTML={{ __html: htmlString }}
-                    ></div>
-                    <div className={Style.backToBlogs}>
-                        <Link href="/blog">
-                            <a> ← Back to blogs</a>
-                        </Link>
-                    </div>
+                    <section id="blogContent">
+                        <div
+                            className={Style.blogContent}
+                            dangerouslySetInnerHTML={{ __html: htmlString }}
+                        ></div>
+                        <div className={Style.backToBlogs}>
+                            <Link href="/blog">
+                                <a> ← Back to blogs</a>
+                            </Link>
+                        </div>
+                    </section>
                 </section>
             </section>
         </Layout>

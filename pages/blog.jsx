@@ -39,7 +39,11 @@ export default function blog({ allPostsData }) {
                     <section>
                         {allPostsData.map(
                             ({ id, title, description, date }) => (
-                                <div key={id} className={Style.blogsContainer}>
+                                <div
+                                    key={id}
+                                    id="blogContainer"
+                                    className={Style.blogsContainer}
+                                >
                                     <div
                                         className={`${UtilStyles.h3} ${Style.title}`}
                                     >

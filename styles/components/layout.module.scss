@@ -1,14 +1,6 @@
 @import "../mixins/variables.mixin.scss";
 @import "../mixins/breakpoints.mixin.scss";
 
-.light {
-    opacity: 1;
-}
-
-.dark {
-    opacity: 1;
-}
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -20,8 +12,7 @@
         map-get($map: $colors, $key: eight),
         map-get($map: $colors, $key: seventh)
     );
-    color: #ffffff;
-    // color: map-get($map: $colors, $key: third);
+    color: map-get($map: $colors, $key: white);
     font-weight: 700;
     nav {
         z-index: 5;
@@ -34,17 +25,23 @@
             position: absolute;
             top: 10vh;
             right: 135px;
+            // right: 100px;
             width: 200%;
             height: 90vh;
             display: flex;
-            align-items: flex-end;
+            // align-items: flex-end;
+            align-items: center;
             flex-direction: column;
             justify-content: space-around;
             transition: all 0.3s ease;
             background-image: inherit;
-            li {
-                margin: auto 20% auto auto;
-            }
+            // li {
+            // margin: auto 2.5rem auto auto;
+            // //change
+            // &:nth-child(2) {
+            //     margin: auto 3rem auto auto;
+            // }
+            // }
         }
     }
     @include sm {
@@ -87,7 +84,10 @@
     }
 
     .open {
-        transform: translateX(0%);
+        transform: translateX(100%);
+        @include sm {
+            transform: translateX(0%);
+        }
         transition: all 0.3s ease;
     }
     .close {
@@ -95,12 +95,14 @@
         transition: all 0.3s ease;
     }
     .burger {
-        width: 30px;
+        // width: 30px;
+        min-width: 20px;
         cursor: pointer;
+        margin-right: 10px;
         div {
             height: 3px;
             margin: 5px 0;
-            background-color: #ffffff;
+            background-color: map-get($map: $colors, $key: white);
         }
     }
     .burgerToCross .line1 {
@@ -133,18 +135,10 @@
         letter-spacing: 2px;
         font-weight: 900;
     }
+}
 
-    .darkMode {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img {
-            width: 20px;
-            height: auto;
-            margin: auto auto auto 20px;
-            cursor: pointer;
-        }
-    }
+.header.dark-mode {
+    color: yellow;
 }
 
 .footerSection {
