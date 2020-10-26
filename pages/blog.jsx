@@ -28,7 +28,7 @@ export default function blog({ allPostsData }) {
                     content="width=device-width, initial-scale=1.0"
                 />
                 <meta
-                    http-equiv="content-type"
+                    httpEquiv="content-type"
                     content="text/html; charset=UTF-8"
                 />
             </Head>

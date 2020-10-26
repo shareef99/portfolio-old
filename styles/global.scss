@@ -12,16 +12,13 @@ body {
     max-width: 100%;
     font-family: "Zilla Slab", serif;
     overflow-x: hidden;
-}
-
-body.light-mode {
     transition: all 0.3s ease;
 }
 
 body.dark-mode {
-    transition: all 0.3s ease;
-
     background-color: map-get($map: $colors, $key: third);
+    color: map-get($map: $colors, $key: white);
+
     #introduction,
     #about,
     #skills,
@@ -29,7 +26,11 @@ body.dark-mode {
     #blogContent,
     #copyRight {
         background-color: inherit;
-        color: map-get($map: $colors, $key: white);
+        color: inherit;
+    }
+
+    #progressBar {
+        background: map-get($map: $colors, $key: forthDM);
     }
 
     #skills {
@@ -41,7 +42,8 @@ body.dark-mode {
         color: map-get($map: $colors, $key: white);
         & > button {
             &:last-child {
-                color: #ffe600;
+                // color: #ffe600;
+                color: map-get($map: $colors, $key: second);
             }
         }
     }

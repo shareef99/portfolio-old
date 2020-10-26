@@ -14,6 +14,23 @@
     );
     color: map-get($map: $colors, $key: white);
     font-weight: 700;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    .progressContainer {
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background-color: map-get($map: $colors, $key: first);
+        .progressBar {
+            height: 8px;
+            background: map-get($map: $colors, $key: fifth);
+            width: 0%;
+        }
+    }
     nav {
         z-index: 5;
         position: relative;
@@ -137,14 +154,16 @@
     }
 }
 
-.header.dark-mode {
-    color: yellow;
+.main {
+    position: relative;
+    top: 10vh;
 }
 
 .footerSection {
     background-color: map-get($map: $colors, $key: seventh);
     color: map-get($map: $colors, $key: fifth);
-
+    position: relative;
+    top: 10vh;
     .footer {
         display: flex;
         justify-content: space-between;

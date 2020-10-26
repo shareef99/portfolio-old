@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Style from "../styles/components/layout.module.scss";
 import UtilStyles from "../styles/utils.module.scss";
 import Link from "next/link";
@@ -7,8 +7,6 @@ import DarkModeToggle from "../components/darkModeToggle";
 export default function Layout({ children }) {
     // Constants and variables
     const [navSlider, setNavSlider] = useState({ isNavbarOpen: false });
-    // const [darkMode, setDarkMode] = useState({ isDarkModeOn: false });
-    // let darkModeClass = " ";
 
     // Actions
     const handleNavSlide = () => {
@@ -16,6 +14,19 @@ export default function Layout({ children }) {
             ? setNavSlider({ isNavbarOpen: !navSlider.isNavbarOpen })
             : setNavSlider({ isNavbarOpen: !navSlider.isNavbarOpen });
     };
+
+    useEffect(function onFirstMount() {
+        window.onscroll = () => {
+            const winScroll =
+                document.body.scrollTop || document.documentElement.scrollTop;
+            const height =
+                document.documentElement.scrollHeight -
+                document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    }, []);
+
     return (
         <section id="layout">
             <header className={Style.header}>
@@ -65,9 +76,15 @@ export default function Layout({ children }) {
                 <div>
                     <DarkModeToggle />
                 </div>
+                <div
+                    id="progressBarContainer"
+                    className={Style.progressContainer}
+                >
+                    <div className={Style.progressBar} id="progressBar"></div>
+                </div>
             </header>
 
-            <main>{children}</main>
+            <main className={Style.main}>{children}</main>
 
             <footer
                 id="footer"

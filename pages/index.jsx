@@ -30,7 +30,6 @@ export default function index() {
                     content="width=device-width, initial-scale=1.0"
                 />
                 <title>Shareef | Home</title>
-                {/* favicon Link */}
             </Head>
             <section>
                 <section className={Style.heroSection}>
