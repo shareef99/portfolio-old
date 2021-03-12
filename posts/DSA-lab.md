@@ -82,3 +82,6 @@ Maybe you have written ' 1 ' instead of ' l '.
 ```c++
     cout << "Error is gone" << endl;
 ```
+
+> **_If you don't find your bug in here. Remember programming is the art of googling. #justGoogleIt_**  
+> -Shareef
