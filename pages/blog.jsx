@@ -1,13 +1,11 @@
-import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import UtilStyles from "../styles/utils.module.scss";
 import Style from "../styles/pages/blog.module.scss";
 import { getSortedPostsData } from "../lib/post";
 import Layout from "../components/layout";
+
 export default function blog({ allPostsData }) {
     return (
         <Layout>
