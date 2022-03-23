@@ -1,81 +1,85 @@
 @import "./mixins/variables.mixin.scss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-display: swap;
-    width: 100%;
-    max-width: 100%;
-    font-family: "Zilla Slab", serif;
-    overflow-x: hidden;
-    transition: all 0.3s ease;
+  font-display: swap;
+  width: 100%;
+  max-width: 100%;
+  font-family: "Zilla Slab", serif;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
 }
 
 body.dark-mode {
-    background-color: map-get($map: $colors, $key: third);
+  background-color: map-get($map: $colors, $key: third);
+  color: map-get($map: $colors, $key: white);
+
+  #introduction,
+  #about,
+  #skills,
+  #blogContainer,
+  #blogContent,
+  #copyRight {
+    background-color: inherit;
+    color: inherit;
+  }
+
+  #progressBar {
+    background: map-get($map: $colors, $key: forthDM);
+  }
+
+  #skills {
+    background-color: map-get($map: $colors, $key: forthDM);
+    color: map-get($map: $colors, $key: third);
+  }
+
+  #darkModeToggle {
     color: map-get($map: $colors, $key: white);
-
-    #introduction,
-    #about,
-    #skills,
-    #blogContainer,
-    #blogContent,
-    #copyRight {
-        background-color: inherit;
-        color: inherit;
+    & > button {
+      &:last-child {
+        // color: #ffe600;
+        color: map-get($map: $colors, $key: second);
+      }
     }
-
-    #progressBar {
-        background: map-get($map: $colors, $key: forthDM);
+  }
+  #dmcheck {
+    background-color: map-get($map: $colors, $key: white);
+    & + label {
+      background-color: #555555;
+      opacity: 1;
     }
-
-    #skills {
-        background-color: map-get($map: $colors, $key: forthDM);
-        color: map-get($map: $colors, $key: third);
+  }
+  #burger {
+    div {
+      background-color: map-get($map: $colors, $key: third);
     }
-
-    #darkModeToggle {
-        color: map-get($map: $colors, $key: white);
-        & > button {
-            &:last-child {
-                // color: #ffe600;
-                color: map-get($map: $colors, $key: second);
-            }
-        }
-    }
-    #dmcheck {
-        background-color: map-get($map: $colors, $key: white);
-        & + label {
-            background-color: #555555;
-            opacity: 1;
-        }
-    }
-    #burger {
-        div {
-            background-color: map-get($map: $colors, $key: third);
-        }
-    }
+  }
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    &:hover {
-        text-decoration: underline;
-    }
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 p {
-    font-size: 1.2rem;
-    line-height: 1.4;
+  font-size: 1.2rem;
+  line-height: 1.4;
 }
