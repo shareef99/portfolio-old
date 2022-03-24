@@ -1,145 +1,47 @@
 @import "../mixins/breakpoints.mixin.scss";
-@import "../mixins/variables.mixin.scss";
-
-.heroSection {
-    //Parallax effect
-    background-image: url("../../public/images/coding\ man.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    @include md {
-        background-attachment: fixed;
-    }
-    // background-color: map-get($map: $colors, $key: seventh);
-    height: 90vh;
-    color: map-get($map: $colors, $key: first);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    div {
-        h1 {
-            font-size: 5rem;
-            font-family: "Cedarville Cursive", cursive;
-        }
-        p {
-            span::before {
-                content: "";
-                animation: changeSubtitle infinite 8s;
-            }
-        }
-    }
-}
-
-.introSection {
-    background-color: map-get($map: $colors, $key: white);
-    color: map-get($map: $colors, $key: third);
-    text-align: center;
-
-    h2 {
-        text-align: start;
-    }
-    h3 {
-        span {
-            padding: 0 5px;
-            position: relative;
-            animation: wave infinite 1s;
-        }
-    }
-    img {
-        margin: 50px auto;
-    }
-
-    p {
-        margin-top: 10px;
-        text-align: left;
-        line-height: 1.5;
-        letter-spacing: normal;
-    }
-}
 
 .skillSection {
-    background-color: map-get($map: $colors, $key: forth);
-    color: map-get($map: $colors, $key: third);
+  .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .skillsItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 50px 0;
+      img {
+        width: 150px;
+        height: auto;
+        @include sm {
+          width: 180px;
+        }
+        @include md {
+          width: 200px;
+        }
+      }
+
+      h3 {
+        text-align: center;
+        margin: 20px 0;
+      }
+    }
+  }
+  @include md {
     .skills {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        .skillsItem {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 50px 0;
-            img {
-                width: 150px;
-                height: auto;
-                @include sm {
-                    width: 180px;
-                }
-                @include md {
-                    width: 200px;
-                }
-            }
-
-            h3 {
-                text-align: center;
-                margin: 20px 0;
-            }
+      .skillsItem {
+        flex-direction: row;
+        h3 {
+          text-align: start;
         }
-    }
-    @include md {
-        .skills {
-            .skillsItem {
-                flex-direction: row;
-                h3 {
-                    text-align: start;
-                }
-                div {
-                    align-self: flex-start;
-                    margin: 0 50px;
-                }
-            }
-            .reversed {
-                flex-direction: row-reverse;
-            }
+        div {
+          align-self: flex-start;
+          margin: 0 50px;
         }
+      }
+      .reversed {
+        flex-direction: row-reverse;
+      }
     }
-}
-
-.aboutSection {
-    color: map-get($map: $colors, $key: third);
-    margin-top: 20px;
-    margin-left: 5px;
-    ol {
-        li {
-            list-style: decimal inside;
-            margin: 5px;
-            line-height: 1.4;
-            font-size: 1.1rem;
-        }
-    }
-}
-
-@keyframes changeSubtitle {
-    0% {
-        content: "Student";
-    }
-    50% {
-        content: "Web Developer";
-    }
-    100% {
-        content: "Constant Learner";
-    }
-}
-
-@keyframes wave {
-    0% {
-        right: 5px;
-    }
-    50% {
-        right: 0;
-    }
-    100% {
-        right: 5px;
-    }
+  }
 }

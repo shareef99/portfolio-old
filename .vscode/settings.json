@@ -1,11 +1,5 @@
 {
-    "cSpell.ignoreWords": [
-        "gmail"
-    ],
-    "cSpell.words": [
-        "cout",
-        "dmcheck",
-        "endl",
-        "whooo"
-    ]
+  "cSpell.ignoreWords": ["gmail"],
+  "cSpell.words": ["cout", "dmcheck", "endl", "whooo"],
+  "javascript.validate.enable": false
 }
