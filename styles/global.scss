@@ -8,6 +8,7 @@
   --orange: #f08700;
   --white: #fffdf6;
   --primary-text: #303545;
+  --dark-text: #010101;
   --green: #3ccfcf;
   --dark-green: #28a7a7;
   --blue: #4257b2;
@@ -70,6 +71,17 @@
     margin: 5px;
     line-height: 1.4;
     font-size: 1.1rem;
+  }
+
+  .socialMediaIcon {
+    width: 32px;
+    height: 32px;
+    margin: 20px 0.2rem;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.2) rotate(360deg);
+      opacity: 0.8;
+    }
   }
 }
 

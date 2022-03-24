@@ -26,6 +26,7 @@ module.exports = {
         green: "var(--green)",
         "dark-green": "var(--dark-green)",
         "primary-text-color": "var(--primary-text)",
+        "dark-text-color": "var(--dark-text)",
       },
     },
   },
