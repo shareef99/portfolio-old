@@ -4,25 +4,25 @@ $size-lg: 991px;
 $size-xl: 1200px;
 
 @mixin sm {
-    @media (min-width: $size-sm) {
-        @content;
-    }
+  @media (min-width: $size-sm) {
+    @content;
+  }
 }
 
 @mixin md {
-    @media (min-width: $size-md) {
-        @content;
-    }
+  @media (min-width: $size-md) {
+    @content;
+  }
 }
 
 @mixin lg {
-    @media (min-width: $size-lg) {
-        @content;
-    }
+  @media (min-width: $size-lg) {
+    @content;
+  }
 }
 
 @mixin xl {
-    @media (min-width: $size-xl) {
-        @content;
-    }
+  @media (min-width: $size-xl) {
+    @content;
+  }
 }
