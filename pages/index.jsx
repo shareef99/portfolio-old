@@ -30,7 +30,7 @@ export default function index() {
       </Head>
 
       <section
-        className="bg-codingMan bg-no-repeat bg-cover bg-center md:bg-fixed h-[90vh] text-orange 
+        className="bg-codingMan bg-no-repeat bg-cover bg-center h-screen text-orange 
           flex-center text-center"
       >
         <div>
