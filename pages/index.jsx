@@ -1,4 +1,4 @@
-import React from "react";
+import { useRef, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Style from "../styles/pages/index.module.scss";
@@ -7,10 +7,31 @@ import useIsInViewport from "use-is-in-viewport";
 import Layout from "../components/layout";
 
 export default function index() {
+  // Constants
+  const name = ["S", "h", "a", "r", "e", "e", "f"];
+
+  // Refs
+  const textRef = useRef(null);
+
   const [isInViewport, targetRef] = useIsInViewport();
   const [isInViewport3, targetRef3] = useIsInViewport();
   const [isInViewport4, targetRef4] = useIsInViewport();
   const [isInViewport5, targetRef5] = useIsInViewport();
+
+  // Effects
+  // This useEffect animates the text on first load.
+  useEffect(() => {
+    let char = 0;
+    let timer = setInterval(() => {
+      textRef.current.children[char].className += " fade";
+      char += 1;
+
+      if (char === name.length) {
+        clearInterval(timer);
+        return;
+      }
+    }, 50);
+  }, []);
 
   return (
     <Layout>
@@ -29,15 +50,13 @@ export default function index() {
         <title>Shareef | Home</title>
       </Head>
 
-      <section
-        className="bg-codingMan bg-no-repeat bg-cover bg-center h-screen text-orange 
-          flex-center text-center"
-      >
-        <div>
-          <h1 className="text-[5rem] font-cursive">I'm Shareef</h1>
-          <p>
-            A <span className="subtitle"></span>
-          </p>
+      <section className="h-screen flex-center text-center">
+        <div ref={textRef}>
+          {name.map((letter, index) => (
+            <span key={index} className="text">
+              {letter}
+            </span>
+          ))}
         </div>
       </section>
       <section
