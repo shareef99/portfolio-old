@@ -77,8 +77,11 @@ export default function index() {
         <title>Shareef | Home</title>
       </Head>
 
-      <section className="h-screen flex-center bg-primary-bg">
-        <div ref={textRef} className="text-5xl font-black tracking-widest">
+      <section className="h-screen flex-center bg-gradient-to-br from-primary-bg to-emerald-700">
+        <div
+          ref={textRef}
+          className="text-5xl font-black tracking-widest px-[5%] text-center sm:text-left"
+        >
           {text.map((letter, index) =>
             letter === "  " ? (
               <br key={index}></br>
@@ -88,7 +91,7 @@ export default function index() {
               </span>
             )
           )}
-          <p className="text-amber-300">
+          <p className="text-amber-300 mt-2">
             Frontend Developer | Blogger | Student
           </p>
         </div>
