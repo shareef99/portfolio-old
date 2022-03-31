@@ -8,7 +8,34 @@ import Layout from "../components/layout";
 
 export default function index() {
   // Constants
-  const name = ["S", "h", "a", "r", "e", "e", "f"];
+  const text = [
+    "H",
+    "i",
+    "!",
+    "  ",
+    "I",
+    "'m",
+    " ",
+    "S",
+    "h",
+    "a",
+    "r",
+    "e",
+    "e",
+    "f",
+    ".",
+    "  ",
+    "D",
+    "e",
+    "v",
+    "e",
+    "l",
+    "o",
+    "p",
+    "e",
+    "r",
+    "!",
+  ];
 
   // Refs
   const textRef = useRef(null);
@@ -26,7 +53,7 @@ export default function index() {
       textRef.current.children[char].className += " fade";
       char += 1;
 
-      if (char === name.length) {
+      if (char === text.length) {
         clearInterval(timer);
         return;
       }
@@ -50,13 +77,20 @@ export default function index() {
         <title>Shareef | Home</title>
       </Head>
 
-      <section className="h-screen flex-center text-center">
-        <div ref={textRef}>
-          {name.map((letter, index) => (
-            <span key={index} className="text">
-              {letter}
-            </span>
-          ))}
+      <section className="h-screen flex-center bg-primary-bg">
+        <div ref={textRef} className="text-5xl font-black tracking-widest">
+          {text.map((letter, index) =>
+            letter === "  " ? (
+              <br key={index}></br>
+            ) : (
+              <span key={index} className="text animate-bounce">
+                {letter}
+              </span>
+            )
+          )}
+          <p className="text-amber-300">
+            Frontend Developer | Blogger | Student
+          </p>
         </div>
       </section>
       <section

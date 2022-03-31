@@ -20,7 +20,6 @@ module.exports = {
       },
       colors: {
         orange: "var(--orange)",
-        white: "var(--white)",
         pink: "var(--pink)",
         blue: "var(--blue)",
         green: "var(--green)",
@@ -28,6 +27,9 @@ module.exports = {
         "primary-text-color": "var(--primary-text)",
         "dark-text-color": "var(--dark-text)",
         gray: "var(--gray)",
+        "primary-bg": "var(--primary-bg-color)",
+        yellow: "var(--yellow)",
+        white: "var(--white)",
       },
     },
   },
