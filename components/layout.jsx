@@ -28,19 +28,34 @@ export default function Layout({ children }) {
             left-0 md:left-[90vw] md:right-0 flex md:flex-col justify-center items-center 
             space-x-4 md:space-x-0 md:space-y-4"
         >
-          <div className="p-2 rounded-full cursor-pointer">
+          <div
+            className="p-2 rounded-full cursor-pointer bg-amber-300 opacity-75 
+              hover:transition-all hover:duration-300 hover:ease-in hover:rotate-[360deg] hover:scale-125"
+          >
             <MdHome className="w-6 h-6 sm:w-8 sm:h-8" />
           </div>
-          <div className="p-2 rounded-full cursor-pointer">
+          <div
+            className="p-2 rounded-full cursor-pointer bg-amber-300 opacity-75 
+              hover:transition-all hover:duration-300 hover:ease-in hover:rotate-[360deg] hover:scale-125"
+          >
             <MdPerson className="w-6 h-6 sm:w-8 sm:h-8" />
           </div>
-          <div className="p-2 rounded-full cursor-pointer">
+          <div
+            className="p-2 rounded-full cursor-pointer bg-amber-300 opacity-75 
+              hover:transition-all hover:duration-300 hover:ease-in hover:rotate-[360deg] hover:scale-125"
+          >
             <BsBriefcaseFill className="w-6 h-6 sm:w-8 sm:h-8" />
           </div>
-          <div className="p-2 rounded-full cursor-pointer">
+          <div
+            className="p-2 rounded-full cursor-pointer bg-amber-300 opacity-75 
+              hover:transition-all hover:duration-300 hover:ease-in hover:rotate-[360deg] hover:scale-125"
+          >
             <BiNews className="w-6 h-6 sm:w-8 sm:h-8" />
           </div>
-          <div className="p-2 rounded-full cursor-pointer">
+          <div
+            className="p-2 rounded-full cursor-pointer bg-amber-300 opacity-75 
+              hover:transition-all hover:duration-300 hover:ease-in hover:rotate-[360deg] hover:scale-125"
+          >
             <MdEmail className="w-6 h-6 sm:w-8 sm:h-8" />
           </div>
         </nav>
