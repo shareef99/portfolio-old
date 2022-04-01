@@ -32,13 +32,21 @@ export default function Layout({ children }) {
             className="p-2 rounded-full cursor-pointer bg-amber-300 opacity-75 
               hover:transition-all hover:duration-300 hover:ease-in hover:rotate-[360deg] hover:scale-125"
           >
-            <MdHome className="w-6 h-6 sm:w-8 sm:h-8" />
+            <Link href="/">
+              <a>
+                <MdHome className="w-6 h-6 sm:w-8 sm:h-8" />
+              </a>
+            </Link>
           </div>
           <div
             className="p-2 rounded-full cursor-pointer bg-amber-300 opacity-75 
               hover:transition-all hover:duration-300 hover:ease-in hover:rotate-[360deg] hover:scale-125"
           >
-            <MdPerson className="w-6 h-6 sm:w-8 sm:h-8" />
+            <Link href="/about">
+              <a>
+                <MdPerson className="w-6 h-6 sm:w-8 sm:h-8" />
+              </a>
+            </Link>
           </div>
           <div
             className="p-2 rounded-full cursor-pointer bg-amber-300 opacity-75 

@@ -24,17 +24,6 @@ export default function index() {
     "e",
     "f",
     ".",
-    "  ",
-    "D",
-    "e",
-    "v",
-    "e",
-    "l",
-    "o",
-    "p",
-    "e",
-    "r",
-    "!",
   ];
 
   // Refs
