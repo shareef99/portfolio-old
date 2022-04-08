@@ -9,6 +9,7 @@ import {
 } from "react-icons/md";
 import { BsBriefcaseFill } from "react-icons/bs";
 import { BiNews } from "react-icons/bi";
+import { AiFillThunderbolt } from "react-icons/ai";
 
 export default function Layout({ children }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -29,7 +30,7 @@ export default function Layout({ children }) {
             space-x-4 md:space-x-0 md:space-y-4"
         >
           <div
-            className="p-2 rounded-full cursor-pointer bg-amber-300 opacity-75 
+            className="p-2 rounded-full cursor-pointer bg-yellow opacity-75 
               hover:transition-all hover:duration-300 hover:ease-in hover:rotate-[360deg] hover:scale-125"
           >
             <Link href="/">
@@ -39,7 +40,7 @@ export default function Layout({ children }) {
             </Link>
           </div>
           <div
-            className="p-2 rounded-full cursor-pointer bg-amber-300 opacity-75 
+            className="p-2 rounded-full cursor-pointer bg-yellow opacity-75 
               hover:transition-all hover:duration-300 hover:ease-in hover:rotate-[360deg] hover:scale-125"
           >
             <Link href="/about">
@@ -49,22 +50,34 @@ export default function Layout({ children }) {
             </Link>
           </div>
           <div
-            className="p-2 rounded-full cursor-pointer bg-amber-300 opacity-75 
+            className="p-2 rounded-full cursor-pointer bg-yellow opacity-75 
               hover:transition-all hover:duration-300 hover:ease-in hover:rotate-[360deg] hover:scale-125"
           >
-            <BsBriefcaseFill className="w-6 h-6 sm:w-8 sm:h-8" />
+            <Link href="/projects">
+              <a>
+                <AiFillThunderbolt className="w-6 h-6 sm:w-8 sm:h-8" />
+              </a>
+            </Link>
           </div>
           <div
-            className="p-2 rounded-full cursor-pointer bg-amber-300 opacity-75 
+            className="p-2 rounded-full cursor-pointer bg-yellow opacity-75 
               hover:transition-all hover:duration-300 hover:ease-in hover:rotate-[360deg] hover:scale-125"
           >
-            <BiNews className="w-6 h-6 sm:w-8 sm:h-8" />
+            <Link href="/blogs">
+              <a>
+                <BiNews className="w-6 h-6 sm:w-8 sm:h-8" />
+              </a>
+            </Link>
           </div>
           <div
-            className="p-2 rounded-full cursor-pointer bg-amber-300 opacity-75 
+            className="p-2 rounded-full cursor-pointer bg-yellow opacity-75 
               hover:transition-all hover:duration-300 hover:ease-in hover:rotate-[360deg] hover:scale-125"
           >
-            <MdEmail className="w-6 h-6 sm:w-8 sm:h-8" />
+            <Link href="/contact" as="/contact-me">
+              <a>
+                <MdEmail className="w-6 h-6 sm:w-8 sm:h-8" />
+              </a>
+            </Link>
           </div>
         </nav>
       </header>
