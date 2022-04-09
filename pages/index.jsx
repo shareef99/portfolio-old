@@ -25,6 +25,10 @@ export default function index() {
     ".",
   ];
 
+  // Refs
+  const textRef = useRef(null);
+
+  // Effects
   // This useEffect animates the text on first load.
   useEffect(() => {
     let char = 0;
@@ -55,7 +59,6 @@ export default function index() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Shareef | Home</title>
       </Head>
-
       <section className="h-screen flex-center bg-gradient-to-br from-primary-bg to-emerald-700">
         <div
           ref={textRef}
@@ -73,49 +76,6 @@ export default function index() {
           <p className="text-amber-300 mt-2">
             Frontend Developer | Blogger | Student
           </p>
-        </div>
-      </section>
-
-      <section id="about" className="container py-24">
-        <h2>About</h2>
-        <div id="about" className="text-primary-text-color mt-5 ml-1">
-          <ol start={0}>
-            <li className="listItem">I am a Frontend developer + Designer.</li>
-            <li className="listItem">
-              I have earn certificate in Responsive Web Design from{" "}
-              <a
-                href="http://freecodecamp.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                freeCodeCamp
-              </a>{" "}
-              check out my{" "}
-              <a
-                href="https://www.freecodecamp.org/certification/shareef99/responsive-web-design"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                certificate
-              </a>
-              .
-            </li>
-            <li className="listItem">
-              I have strong Knowledge of CSS, SCSS(preprocessor) and design
-              principles.
-            </li>
-            <li className="listItem">
-              I believe in a simple and beautiful design which can attract more
-              and more audience.
-            </li>
-            <li className="listItem">
-              I'm currently working on React + NextJS.
-            </li>
-            <li className="listItem">
-              I am willing to upgrade my self and your company with full efforts
-              and curiosity.
-            </li>
-          </ol>
         </div>
       </section>
     </Layout>

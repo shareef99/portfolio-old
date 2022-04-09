@@ -53,6 +53,48 @@ function about() {
           </div>
         </div>
       </section>
+      <section id="about" className="container py-24">
+        <h2>About</h2>
+        <div id="about" className="text-primary-text-color mt-5 ml-1">
+          <ol start={0}>
+            <li className="listItem">I am a Frontend developer + Designer.</li>
+            <li className="listItem">
+              I have earn certificate in Responsive Web Design from{" "}
+              <a
+                href="http://freecodecamp.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                freeCodeCamp
+              </a>{" "}
+              check out my{" "}
+              <a
+                href="https://www.freecodecamp.org/certification/shareef99/responsive-web-design"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                certificate
+              </a>
+              .
+            </li>
+            <li className="listItem">
+              I have strong Knowledge of CSS, SCSS(preprocessor) and design
+              principles.
+            </li>
+            <li className="listItem">
+              I believe in a simple and beautiful design which can attract more
+              and more audience.
+            </li>
+            <li className="listItem">
+              I'm currently working on React + NextJS.
+            </li>
+            <li className="listItem">
+              I am willing to upgrade my self and your company with full efforts
+              and curiosity.
+            </li>
+          </ol>
+        </div>
+      </section>
     </Layout>
   );
 }
