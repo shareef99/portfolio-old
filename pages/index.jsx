@@ -1,7 +1,6 @@
 import { useRef, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import UtilStyles from "../styles/utils.module.scss";
 import useIsInViewport from "use-is-in-viewport";
 import Layout from "../components/layout";
 
