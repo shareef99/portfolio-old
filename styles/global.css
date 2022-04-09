@@ -1,12 +1,9 @@
 @import "animate.css";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwind.css";
 
 :root {
   --primary-bg-color: #14418b;
-  --yellow: rgb(251, 223, 40);
+  --yellow: #fbdf28;
   --white: #fffdf6;
 
   --gray: #454e56;
@@ -18,61 +15,6 @@
   --dark-green: #28a7a7;
   --blue: #4257b2;
   --pink: #f3d4d5;
-}
-
-@layer base {
-  h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: var(--blue);
-  }
-
-  h2:after {
-    content: "";
-    /* This is necessary for the pseudo element to work. */
-    display: block;
-    /* This will put the pseudo element on its own line. */
-    margin: 0;
-    /* This will center the border. */
-    width: 70px;
-    /* Change this to whatever width you want. */
-    padding-top: 5px;
-    /* This creates some space between the element and the border. */
-    border-bottom: 3px solid var(--dark-green);
-    /* This creates the border. Replace black with whatever color you want. */
-  }
-
-  h3 {
-    font-size: 1.75rem;
-  }
-}
-
-@layer utilities {
-  .font-cursive {
-    font-family: "Cedarville Cursive", cursive;
-  }
-
-  .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-@layer components {
-  .wave {
-    padding: 0 5px;
-    position: relative;
-    animation: wave infinite 1s;
-  }
-
-  .listItem {
-    list-style: decimal inside;
-    margin: 5px;
-    line-height: 1.4;
-    font-size: 1.1rem;
-  }
 }
 
 * {
@@ -88,26 +30,6 @@ body {
   font-family: "Zilla Slab", serif;
   overflow-x: hidden;
   transition: all 0.3s ease;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-p {
-  font-size: 1.2rem;
-  line-height: 1.4;
 }
 
 @keyframes wave {
