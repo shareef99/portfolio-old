@@ -5,7 +5,11 @@ import { skills } from "../public/dummyData";
 function about() {
   return (
     <Layout>
-      <section id="introduction" className="container mt-8 mb-10 text-center">
+      <section
+        id="introduction"
+        className="container pt-8 pb-10 text-center dark:bg-slate-400 text-primary-text-color 
+          dark:text-dark-text-color"
+      >
         <h2 className="text-left">Introduction</h2>
         <div>
           <img

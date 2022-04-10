@@ -58,6 +58,10 @@ body {
   color: var(--white);
 }
 
+.dark .text.fade {
+  color: var(--primary-text);
+}
+
 .animate-bounce:hover {
   min-width: 10px;
   display: inline-block;

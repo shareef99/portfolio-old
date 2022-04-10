@@ -18,13 +18,13 @@ const Post = ({ htmlString, data }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
       </Head>
-      <section className="container my-12">
+      <section className="container py-12 dark:bg-slate-400 dark:text-dark-text-color">
         <div>
           <h2>{data.title}</h2>
         </div>
         <article className="mx-auto my-10 md:w-[70%]">
           <div dangerouslySetInnerHTML={{ __html: htmlString }}></div>
-          <Link href="/blog">← Back to blogs</Link>
+          <Link href="/blogs">← Back to blogs</Link>
         </article>
       </section>
     </Layout>

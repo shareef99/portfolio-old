@@ -99,3 +99,21 @@ export const projects = [
     title: "Huddle Landing Page",
   },
 ];
+
+export const homePageText = [
+  "H",
+  "i",
+  "!",
+  "  ",
+  "I",
+  "'m",
+  " ",
+  "S",
+  "h",
+  "a",
+  "r",
+  "e",
+  "e",
+  "f",
+  ".",
+];

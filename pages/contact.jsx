@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 const contact = () => {
   return (
     <Layout>
-      <section className="w-screen h-screen bg-blue">
+      <section className="w-screen h-screen bg-blue text-primary-text-color dark:text-dark-text-color">
         <section className="container flex-center flex-col h-screen md:w-1/2">
           <h1 className="text-yellow text-4xl w-full font-semibold mb-8">
             Contact Shareef

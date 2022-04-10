@@ -25,8 +25,8 @@ export default function Project() {
           type="image/x-icon"
         />
       </Head>
-      <section className="container">
-        <h2 className="my-12">Projects</h2>
+      <section className="container dark:bg-slate-400">
+        <h2 className="py-12">Projects</h2>
         <div className="flex flex-wrap m-auto text-center justify-center">
           {projects.map((project) => {
             return (

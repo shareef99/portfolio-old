@@ -2,31 +2,12 @@ import { useRef, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/layout";
+import { homePageText as text } from "../public/dummyData";
 
 export default function index() {
-  // Constants
-  const text = [
-    "H",
-    "i",
-    "!",
-    "  ",
-    "I",
-    "'m",
-    " ",
-    "S",
-    "h",
-    "a",
-    "r",
-    "e",
-    "e",
-    "f",
-    ".",
-  ];
-
   // Refs
   const textRef = useRef(null);
 
-  // Effects
   // This useEffect animates the text on first load.
   useEffect(() => {
     let char = 0;
@@ -71,7 +52,7 @@ export default function index() {
               </span>
             )
           )}
-          <p className="text-amber-300 mt-2">
+          <p className="text-amber-300 dark:text-amber-400 mt-2">
             Frontend Developer | Blogger | Student
           </p>
         </div>

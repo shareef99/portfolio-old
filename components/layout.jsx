@@ -13,19 +13,21 @@ import { AiFillThunderbolt } from "react-icons/ai";
 import { useTheme } from "next-themes";
 
 export default function Layout({ children }) {
+  const [isDarkMode, setIsDarkMode] = useState();
   const { theme, setTheme } = useTheme();
-  console.log(theme);
+
+  useEffect(() => {
+    setIsDarkMode(theme === "dark" ? true : false);
+  }, [theme]);
 
   return (
     <Fragment>
       <header>
         <div
-          className="fixed right-5 top-10 z-50 p-2 rounded-full cursor-pointer shadow-xl"
-          style={{
-            color: theme === "dark" ? "var(--gray)" : "var(--yellow)",
-          }}
+          className="fixed right-5 top-10 z-50 p-2 rounded-full cursor-pointer shadow-xl text-yellow 
+            dark:text-slate-500"
         >
-          {theme === "dark" ? (
+          {isDarkMode ? (
             <MdModeNight size="2rem" onClick={() => setTheme("light")} />
           ) : (
             <MdLightMode size="2rem" onClick={() => setTheme("dark")} />
