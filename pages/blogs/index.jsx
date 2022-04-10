@@ -22,23 +22,25 @@ export default function blog({ allPostsData }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
       </Head>
-      <section className="container pt-12 dark:bg-slate-400 dark:text-dark-text-color">
-        <h2>Blogs</h2>
-        <div className="w-11/12 pb-8">
-          {allPostsData.map(({ id, title, description, date }) => (
-            <div key={id} id="blogContainer" className="py-8 ml-4">
-              <h3 className="text-2xl">
-                <Link href={`/blogs/${id}`}>{title}</Link>
-              </h3>
-              <p className="text-lg">
-                {description}{" "}
-                <Link href={`/blogs/${id}`}>
-                  <a>...Learn More Now</a>
-                </Link>
-              </p>
-              <p>{date}</p>
-            </div>
-          ))}
+      <section className="pt-12 dark:bg-slate-400 dark:text-dark-text-color">
+        <div className="container">
+          <h2>Blogs</h2>
+          <div className="w-11/12 pb-8">
+            {allPostsData.map(({ id, title, description, date }) => (
+              <div key={id} id="blogContainer" className="py-8 ml-4">
+                <h3 className="text-2xl">
+                  <Link href={`/blogs/${id}`}>{title}</Link>
+                </h3>
+                <p className="text-lg">
+                  {description}{" "}
+                  <Link href={`/blogs/${id}`}>
+                    <a>...Learn More Now</a>
+                  </Link>
+                </p>
+                <p>{date}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </Layout>

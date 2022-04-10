@@ -7,24 +7,26 @@ function about() {
     <Layout>
       <section
         id="introduction"
-        className="container pt-8 pb-10 text-center dark:bg-slate-400 text-primary-text-color 
+        className="pt-8 pb-10 text-center dark:bg-slate-400 text-primary-text-color 
           dark:text-dark-text-color"
       >
-        <h2 className="text-left">Introduction</h2>
-        <div>
-          <img
-            className="mx-auto my-12"
-            src="images/man.webp"
-            alt="profile photo"
-          />
+        <div className="container">
+          <h2 className="text-left">Introduction</h2>
+          <div>
+            <img
+              className="mx-auto my-12"
+              src="images/man.webp"
+              alt="profile photo"
+            />
+          </div>
+          <h3 className="font-medium">
+            Hello <span className="wave">👋</span>
+          </h3>
+          <p className="text-left leading-6 md:w-3/4 md:mx-auto">
+            I'm Shareef, a software engineer, writer, and constant learner. I
+            work with React, NextJS, Tailwind CSS, and Firebase.
+          </p>
         </div>
-        <h3 className="font-medium">
-          Hello <span className="wave">👋</span>
-        </h3>
-        <p className="text-left leading-6 md:w-3/4 md:mx-auto">
-          I'm Shareef, a software engineer, writer, and constant learner. I work
-          with React, NextJS, Tailwind CSS, and Firebase.
-        </p>
       </section>
       <section id="skills" className="bg-blue text-zinc-200">
         <div className="container pt-24 pb-12">

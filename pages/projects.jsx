@@ -25,26 +25,28 @@ export default function Project() {
           type="image/x-icon"
         />
       </Head>
-      <section className="container dark:bg-slate-400">
-        <h2 className="py-12">Projects</h2>
-        <div className="flex flex-wrap m-auto text-center justify-center">
-          {projects.map((project) => {
-            return (
-              <div
-                key={project.id}
-                className="my-6 mx-12 w-72 max-w-full bg-blue text-xl shadow-xl hover:scale-110 transition-all duration-300 ease-in rounded"
-              >
-                <a href={project.href} target="_blank">
-                  <img
-                    src={project.src}
-                    alt={project.alt}
-                    className="max-w-full w-full rounded"
-                  />
-                  <p className="my-2">{project.title}</p>
-                </a>
-              </div>
-            );
-          })}
+      <section className="dark:bg-slate-400">
+        <div className="container ">
+          <h2 className="py-12">Projects</h2>
+          <div className="flex flex-wrap m-auto text-center justify-center">
+            {projects.map((project) => {
+              return (
+                <div
+                  key={project.id}
+                  className="my-6 mx-12 w-72 max-w-full bg-blue text-xl shadow-xl hover:scale-110 transition-all duration-300 ease-in rounded"
+                >
+                  <a href={project.href} target="_blank">
+                    <img
+                      src={project.src}
+                      alt={project.alt}
+                      className="max-w-full w-full rounded"
+                    />
+                    <p className="my-2">{project.title}</p>
+                  </a>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
     </Layout>
