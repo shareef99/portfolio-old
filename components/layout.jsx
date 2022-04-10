@@ -10,24 +10,31 @@ import {
 import { BsBriefcaseFill } from "react-icons/bs";
 import { BiNews } from "react-icons/bi";
 import { AiFillThunderbolt } from "react-icons/ai";
+import { useTheme } from "next-themes";
 
 export default function Layout({ children }) {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const { theme, setTheme } = useTheme();
+  console.log(theme);
 
   return (
     <Fragment>
       <header>
-        <div className="fixed right-5 top-10 z-50 bg-gray p-2 rounded-full cursor-pointer shadow-xl">
-          {isDarkMode ? (
-            <MdModeNight size="2rem" />
+        <div
+          className="fixed right-5 top-10 z-50 p-2 rounded-full cursor-pointer shadow-xl"
+          style={{
+            color: theme === "dark" ? "var(--gray)" : "var(--yellow)",
+          }}
+        >
+          {theme === "dark" ? (
+            <MdModeNight size="2rem" onClick={() => setTheme("light")} />
           ) : (
-            <MdLightMode size="2rem" />
+            <MdLightMode size="2rem" onClick={() => setTheme("dark")} />
           )}
         </div>
         <nav
           className="w-screen md:w-[10vw] h-[10vh] md:h-screen fixed z-40 bottom-0 md:top-0
             left-0 md:left-[90vw] md:right-0 flex md:flex-col justify-center items-center 
-            space-x-4 md:space-x-0 md:space-y-4"
+            space-x-4 md:space-x-0 md:space-y-4 text-black"
         >
           <div
             className="p-2 rounded-full cursor-pointer bg-yellow opacity-75 
