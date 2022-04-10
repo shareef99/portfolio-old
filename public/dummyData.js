@@ -11,7 +11,7 @@ export const skills = [
   {
     title: "Teaching 👨‍🏫",
     content:
-      "Apart from programming, I love to teach. I enjoy teaching Maths, Programming.",
+      "Apart from programming, I love to teach. I enjoy teaching Maths, Programming, and Engineering subjects.",
     quote: "The best way to learn is to teach",
     imgSrc: "images/teacher.webp",
     alt: "Teaching",
