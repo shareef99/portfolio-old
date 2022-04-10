@@ -1,0 +1,66 @@
+@import "animate.css";
+@import "tailwind.css";
+
+:root {
+  --primary-bg-color: #14418b;
+  --yellow: #fbdf28;
+  --white: #fffdf6;
+
+  --gray: #454e56;
+
+  --orange: #f08700;
+  --primary-text: #303545;
+  --dark-text: #010101;
+  --green: #3ccfcf;
+  --dark-green: #28a7a7;
+  --blue: #4257b2;
+  --pink: #f3d4d5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-display: swap;
+  width: 100%;
+  max-width: 100%;
+  font-family: "Zilla Slab", serif;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+}
+
+@keyframes wave {
+  0% {
+    right: 5px;
+  }
+  50% {
+    right: 0;
+  }
+  100% {
+    right: 5px;
+  }
+}
+
+/* This text and fade class is for animating the text in the landing section */
+.text {
+  /* opacity: 0; */
+  /* transform: translateY(50px); */
+  transition: all 0.5s ease;
+  color: var(--yellow);
+}
+
+.text.fade {
+  /* opacity: 1; */
+  /* transform: translateY(0); */
+  color: var(--white);
+}
+
+.animate-bounce:hover {
+  min-width: 10px;
+  display: inline-block;
+  animation: swing 1s;
+  color: #ffd700;
+}
