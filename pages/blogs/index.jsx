@@ -1,10 +1,20 @@
 import Head from "next/head";
 import Link from "next/link";
-import fs from "fs";
-import { getSortedPostsData } from "../../lib/post";
+import { useEffect, useState } from "react";
 import Layout from "../../components/layout";
 
-export default function blog({ allPostsData }) {
+export default function blog() {
+  const [posts, setPosts] = useState();
+
+  useEffect(() => {
+    fetch("https://dev.to/api/articles?username=shareef")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setPosts(data);
+      });
+  }, []);
+
   return (
     <Layout>
       <Head>
@@ -26,35 +36,24 @@ export default function blog({ allPostsData }) {
         <div className="container">
           <h2>Blogs</h2>
           <div className="w-11/12 pb-8">
-            {allPostsData.map(({ id, title, description, date }) => (
-              <div key={id} id="blogContainer" className="py-8 ml-4">
-                <h3 className="text-2xl">
-                  <Link href={`/blogs/${id}`}>{title}</Link>
-                </h3>
-                <p className="text-lg">
-                  {description}{" "}
-                  <Link href={`/blogs/${id}`}>
-                    <a>...Learn More Now</a>
-                  </Link>
-                </p>
-                <p>{date}</p>
-              </div>
-            ))}
+            {posts &&
+              posts.map(({ id, title, description, published_at, url }) => (
+                <div key={id} id="blogContainer" className="py-8 ml-4">
+                  <h3 className="text-2xl">
+                    <Link href={url}>{title}</Link>
+                  </h3>
+                  <p className="text-lg">
+                    {description}{" "}
+                    <Link href={url}>
+                      <a target="_blank">...Learn More Now</a>
+                    </Link>
+                  </p>
+                  <p>{published_at.slice(0, 10)}</p>
+                </div>
+              ))}
           </div>
         </div>
       </section>
     </Layout>
   );
 }
-
-export const getStaticProps = async () => {
-  const files = fs.readdirSync("posts");
-  const allPostsData = getSortedPostsData();
-
-  return {
-    props: {
-      slugs: files.map((filename) => filename.replace(".md", "")),
-      allPostsData,
-    },
-  };
-};
