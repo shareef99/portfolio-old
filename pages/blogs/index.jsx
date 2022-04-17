@@ -40,13 +40,15 @@ export default function blog() {
               posts.map(({ id, title, description, published_at, url }) => (
                 <div key={id} id="blogContainer" className="py-8 ml-4">
                   <h3 className="text-2xl">
-                    <Link href={url}>{title}</Link>
+                    <a href={url} target="_blank">
+                      {title}
+                    </a>
                   </h3>
                   <p className="text-lg">
                     {description}{" "}
-                    <Link href={url}>
-                      <a target="_blank">...Learn More Now</a>
-                    </Link>
+                    <a href={url} target="_blank">
+                      ...Learn More Now
+                    </a>
                   </p>
                   <p>{published_at.slice(0, 10)}</p>
                 </div>
