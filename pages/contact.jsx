@@ -1,6 +1,11 @@
 import Layout from "../components/layout";
 
 const contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Shareef will get back to you soon!");
+  };
+
   return (
     <Layout>
       <section className="w-screen h-screen bg-blue text-primary-text-color dark:text-dark-text-color">
@@ -8,7 +13,10 @@ const contact = () => {
           <h1 className="text-yellow text-4xl w-full font-semibold mb-8">
             Contact Shareef
           </h1>
-          <form className="flex self-center flex-col w-full mx-auto rounded bg-slate-300 px-4 py-6 space-y-4">
+          <form
+            className="flex self-center flex-col w-full mx-auto rounded bg-slate-300 px-4 py-6 space-y-4"
+            onSubmit={handleSubmit}
+          >
             <div className="flex flex-col space-y-2">
               <label htmlFor="name" className="text-lg font-medium">
                 Name:
