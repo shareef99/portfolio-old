@@ -3,7 +3,10 @@ import Layout from "../components/layout";
 const contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Shareef will get back to you soon!");
+    const name = e.target.children[0].children[1].value;
+    const email = e.target.children[1].children[1].value;
+    const message = e.target.children[2].children[1].value;
+    window.location.href = `mailto:nadeemshareef934@gmail.com?subject=${name}&body=${message}`;
   };
 
   return (
