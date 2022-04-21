@@ -15,7 +15,6 @@ export default function Project() {
           name="keywords"
           content="projects, project, shareef, shareef99, shareefBhai, web development projects, html-css projects"
         />
-
         <meta name="author" content="Shareef" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Project | Shareef</title>
@@ -25,27 +24,32 @@ export default function Project() {
           type="image/x-icon"
         />
       </Head>
-      <section className="dark:bg-slate-400">
-        <div className="container ">
+      <section className="dark:bg-slate-400 dark:text-primary-text-color">
+        <div className="container">
           <h2 className="py-12">Projects</h2>
-          <div className="flex flex-wrap m-auto text-center justify-center">
-            {projects.map((project) => {
-              return (
+          <div className="flex flex-col md:container">
+            {projects.map((project) => (
+              <div className="grid md:grid-cols-2 gap-y-8 md:gap-y-0 md:gap-x-0 mb-16 md:mb-24 ">
                 <div
-                  key={project.id}
-                  className="my-6 mx-12 w-72 max-w-full bg-blue text-xl shadow-xl hover:scale-110 transition-all duration-300 ease-in rounded"
+                  className={`h-auto w-36 md:w-60 ls:w-44 mx-auto self-center  ${
+                    project.id % 2 === 0 && "md:order-last"
+                  }`}
                 >
+                  <img src={project.src} alt={project.alt} className="w-full" />
+                </div>
+                <div className="md:place-self-center md:space-y-4">
+                  <h3 className="font-semibold text-center md:text-left text-2xl">
+                    {project.title}
+                  </h3>
+                  <p className="font-medium text-base md:mr-8">
+                    {project.description}
+                  </p>
                   <a href={project.href} target="_blank">
-                    <img
-                      src={project.src}
-                      alt={project.alt}
-                      className="max-w-full w-full rounded"
-                    />
-                    <p className="my-2">{project.title}</p>
+                    {project.href}
                   </a>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </section>

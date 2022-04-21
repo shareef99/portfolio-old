@@ -39,7 +39,7 @@ function about() {
                   index % 2 !== 0 && "md:flex-row-reverse md:justify-end"
                 } `}
               >
-                <div className="h-auto w-36 md:w-40 ls:w-44 mx-auto md:mx-0  ">
+                <div className="h-auto w-36 md:w-40 ls:w-44 mx-auto md:mx-0">
                   <img src={skill.imgSrc} alt={skill.alt} />
                 </div>
                 <div
