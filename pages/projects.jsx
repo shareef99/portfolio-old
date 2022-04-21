@@ -44,8 +44,12 @@ export default function Project() {
                   <p className="font-medium text-base md:mr-8">
                     {project.description}
                   </p>
-                  <a href={project.href} target="_blank">
-                    {project.href}
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    className="text-xl underline hover:no-underline"
+                  >
+                    {project.linkText}
                   </a>
                 </div>
               </div>

@@ -33,6 +33,7 @@ export const projects = [
     title: "Yourounotes",
     src: "images/yourounotes.webp",
     alt: "Yourounotes Photo",
+    linkText: "View Project",
     href: "https://yourounotes.vercel.app/",
     description:
       "During the lockdown, physical classes were moved to online classes, and the communication gap between faculty and students rose to its all-time high. At these times, finding the notes and previous year's question papers was tough. I built a platform where students can upload notes and they can get the notes for each and every subject.",
@@ -44,22 +45,24 @@ export const projects = [
     title: "CLI tool",
     src: "images/npm.webp",
     alt: "CLI tool",
-    href: "https:www.google.com",
+    linkText: "npm package",
+    href: "https://www.npmjs.com/package/track-task",
     description:
-      "This is a CLI tool that I built to help me manage my projects. It helps me to create a project, add a task, and delete a task.",
+      'Do you know we can build terminal applications with Javascript 🙀 as soon as I get to know that, I build one named "Track Task", which is used to track your quick tasks from the terminal itself.',
     technology: ["JavaScript", "npm"],
-    tags: ["JavaScript"],
+    tags: ["JavaScript", "npm"],
   },
   {
     id: 3,
     title: "VSCode Extension",
     src: "images/vscode.webp",
     alt: "VSCode Extension",
-    href: "https:www.google.com",
+    linkText: "VSCode Marketplace",
+    href: "https://marketplace.visualstudio.com/items?itemName=NadeemShareef.shareef-blogs",
     description:
-      "This is a VSCode extension that I built to help me manage my projects. It helps me to create a project, add a task, and delete a task.",
-    technology: ["JavaScript", "npm"],
-    tags: ["JavaScript"],
+      'VSCode is the largest and most loved code editor. I always wanted to build something with VSCode. I built a VSCode extension named "Shareef Blogs". You can search my blogs from VSCode itself. It fetches all my latest blogs from dev.to API and displays it.',
+    technology: ["JavaScript", "axios", "VSCode API"],
+    tags: ["JavaScript", "axios"],
   },
 ];
 
