@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    router.push("https://postfolio-shareef.vercel.app");
+    router.push("https://postfolio-shareef.vercel.app/");
   }, []);
 
   return (
